@@ -5,7 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 const fetchLocate = async (id) => {
   const response = await productOpenApi({
     method: 'get',
-    url: `/prfplc/${id}`
+    url: `/api/prfplc/${id}`
   });
   const parser = new XMLParser();
   const jsonData = parser.parse(response.data);

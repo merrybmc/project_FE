@@ -5,7 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 const fetchtemp = async () => {
   const response = await productOpenApi({
     method: 'get',
-    url: '/pblprfr',
+    url: '/api/pblprfr',
     params: {
       stdate: 20240913,
       cpage: 1,

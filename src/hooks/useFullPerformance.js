@@ -19,7 +19,7 @@ const fetchFullPerformance = async () => {
   // 첫 번째 API 요청
   let response = await productOpenApi({
     method: 'get',
-    url: '/pblprfr',
+    url: '/api/pblprfr',
     params: {
       stdate: formattedCurrentDate,
       cpage: 1,

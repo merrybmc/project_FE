@@ -5,7 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 const fetchGenreRank = async ({ ststype, date, catecode }) => {
   const response = await productOpenApi({
     method: 'get',
-    url: '/boxoffice',
+    url: '/api/boxoffice',
     params: {
       ststype: ststype,
       date: date,
@@ -31,7 +31,7 @@ export const useGenreRank = ({ ststype, date, catecode }) => {
 const fetchAreaRank = async ({ ststype, date, area }) => {
   const response = await productOpenApi({
     method: 'get',
-    url: `/boxoffice?ststype=${ststype}&date=${date}&area=${area}`
+    url: `/api/boxoffice?ststype=${ststype}&date=${date}&area=${area}`
   });
 
   const parser = new XMLParser();

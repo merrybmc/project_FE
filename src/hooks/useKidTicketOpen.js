@@ -19,7 +19,7 @@ const fetchKidTicketOpen = async () => {
   // 첫 번째 API 요청
   const response = await productOpenApi({
     method: 'get',
-    url: '/pblprfr',
+    url: '/api/pblprfr',
     params: {
       stdate: formattedYesterdayDate,
       cpage: 1,

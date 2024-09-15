@@ -7,7 +7,7 @@ const fetchTheater = async ({ id }) => {
 
   const response = await productOpenApi({
     method: 'get',
-    url: `/pblprfr/${id}`
+    url: `/api/pblprfr/${id}`
   });
 
   const parser = new XMLParser();

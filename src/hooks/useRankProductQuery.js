@@ -5,8 +5,8 @@ import { XMLParser } from 'fast-xml-parser';
 const fetchRankProduct = async ({ ststype, date, catecode, area }) => {
   const url =
     catecode || area
-      ? `/boxoffice?ststype=${ststype}&date=${date}&catecode=${catecode}&area=${area}`
-      : `/boxoffice?ststype=${ststype}&date=${date}`;
+      ? `/api/boxoffice?ststype=${ststype}&date=${date}&catecode=${catecode}&area=${area}`
+      : `/api/boxoffice?ststype=${ststype}&date=${date}`;
 
   const response = await productOpenApi({
     method: 'get',

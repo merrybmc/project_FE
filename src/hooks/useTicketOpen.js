@@ -17,7 +17,7 @@ const fetchTicketOpen = async () => {
 
   let response = await productOpenApi({
     method: 'get',
-    url: '/pblprfr',
+    url: '/api/pblprfr',
     params: {
       cpage: 1,
       rows: 5,

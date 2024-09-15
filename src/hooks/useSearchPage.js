@@ -20,7 +20,7 @@ const fetchSearchMusical = async (key, regionCode, stateCodes, categoryCodes, st
     : formatDate(new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())); // 1년 후
 
   // URL 생성
-  const url = `/pblprfr?stdate=${stdate}&eddate=${eddate}&cpage=1&rows=500&shprfnm=${encodeURIComponent(key)}&signgucode=${regionCode}&prfstate=${stateCodes}&shcate=${categoryCodes}&kidstate=${kindMoad}`;
+  const url = `/api/pblprfr?stdate=${stdate}&eddate=${eddate}&cpage=1&rows=500&shprfnm=${encodeURIComponent(key)}&signgucode=${regionCode}&prfstate=${stateCodes}&shcate=${categoryCodes}&kidstate=${kindMoad}`;
 
   // URL 로그 출력
   console.log('API URL:', url);
