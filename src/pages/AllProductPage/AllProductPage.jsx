@@ -22,7 +22,7 @@ export default function AllProductPage() {
 
   const weeklyDate = format(today, 'yyyyMMdd');
 
-  const { data, isLoading, error } = useRankProductQuery({ ststype, date, catecode, area });
+  const { data, isLoading } = useRankProductQuery({ ststype, date, catecode, area });
 
   useEffect(() => {
     if (activeRanking === 'genre') {

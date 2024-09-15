@@ -3,7 +3,7 @@ import { useUserInfoQuery } from '../../hooks/useUserInfoQuery';
 import * as S from './Profile.styled';
 
 export default function Profile() {
-  const { data: userInfo, isPending, isError } = useUserInfoQuery();
+  const { data: userInfo } = useUserInfoQuery();
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);

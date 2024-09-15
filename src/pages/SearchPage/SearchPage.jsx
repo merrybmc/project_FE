@@ -24,19 +24,14 @@ const SearchPage = () => {
   const [categoryCodes, setCategoryCodes] = useState([]);
   const [shouldFetch, setShouldFetch] = useState(false);
   const [page, setPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage] = useState(10);
   const [startDate, setStartDate] = useState(''); // 시작일 상태 추가
   const [endDate, setEndDate] = useState(''); // 종료일 상태 추가
   const [kindMoad, setKindMoad] = useState('N'); // 아동용 상태 추가
   const [sortOption, setSortOption] = useState('showAllMusicals'); // 정렬 옵션 추가
 
   const navigate = useNavigate();
-  const [query, setQuery] = useSearchParams();
-
-  useEffect(() => {
-    console.log(query.get('name'));
-    onSearch();
-  }, [query]);
+  const [query] = useSearchParams();
 
   const onNavigateDetailPage = (id) => {
     navigate(`/detail/${id}`);
@@ -165,6 +160,10 @@ const SearchPage = () => {
     setPage(1); // 페이지 초기화
     setKey('');
   };
+
+  useEffect(() => {
+    onSearch();
+  }, [query]);
 
   const loadMore = () => {
     setPage((prevPage) => prevPage + 1); // 페이지 증가

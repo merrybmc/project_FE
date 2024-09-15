@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheaterQuery } from '../../hooks/useTheaterQuery';
 import { useLocateQuery } from '../../hooks/useLocateQuery';
 import { CiShare2 } from 'react-icons/ci';
@@ -9,7 +9,6 @@ import DetailTab from '../../components/DetailProduct/DetailTab';
 import DetailLocation from './DetailLocation';
 import 'react-calendar/dist/Calendar.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import styled from 'styled-components';
 import { useOrderMutation } from '../../hooks/useOrderProductMutation';
 
 function DetailProduct() {
@@ -66,7 +65,6 @@ function DetailProduct() {
   }
 
   const kakaoShare = () => {
-    let currentURL = window.location.url;
     let productImageUrl = data?.poster;
     let productSummary = '';
     let productTitle = data?.prfnm;
@@ -91,10 +89,6 @@ function DetailProduct() {
       // 카카오톡 미설치 시 카카오톡 설치 경로이동
       installTalk: true
     });
-  };
-
-  const bookProduct = () => {
-    alert('성공적으로 예매되었습니다!');
   };
 
   const highlightDates = getDateRangeData(data?.prfpdfrom, data?.prfpdto);

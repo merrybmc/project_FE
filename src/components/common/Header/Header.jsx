@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import * as S from './Header.styled.js';
 import { useNavigate } from 'react-router-dom';
 import { useUserInfoQuery } from '../../../hooks/useUserInfoQuery.js';
 import { useLogoutMutation } from '../../../hooks/useLogoutMutation.js';
-import { useQueryClient } from '@tanstack/react-query';
 
 export default function Header() {
-  const { data: userInfo, isPending } = useUserInfoQuery();
+  const { data: userInfo } = useUserInfoQuery();
   const { mutate: logoutMutation } = useLogoutMutation();
 
   const navigate = useNavigate();

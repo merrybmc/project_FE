@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Profile from '../../components/Mypage/Profile';
 
 export default function Mypage() {
-  const { data: userInfo, isPending, isError } = useUserInfoQuery();
+  const { isError } = useUserInfoQuery();
   const [tabHighlight, setTabHighlight] = useState('주문내역');
   const navigate = useNavigate();
 

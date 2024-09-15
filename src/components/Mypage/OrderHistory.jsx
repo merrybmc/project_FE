@@ -19,7 +19,7 @@ export default function OrderHistory() {
   useEffect(() => {
     const params = new URLSearchParams(searchQuery);
     setQuery(params);
-  }, [searchQuery]);
+  }, [searchQuery, setQuery]);
 
   useEffect(() => {
     if (data) console.log(data);

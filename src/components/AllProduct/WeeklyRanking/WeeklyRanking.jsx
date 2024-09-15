@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as S from './WeeklyRanking.styled.js';
 import WeeklyRankingCard from '../WeeklyRankingCard/WeeklyRankingCard.jsx';
@@ -31,12 +31,6 @@ const WeeklyRanking = ({ ststype, date }) => {
   const goToDetailPage = (id) => {
     navigate(`/detail/${id}`);
   };
-
-  useEffect(() => {
-    if (data && data.length > 0) {
-      const firstProductImageUrl = `http://www.kopis.or.kr${data[0].poster}`;
-    }
-  }, [data]);
 
   if (isLoading) {
     return (

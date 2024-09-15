@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './TabMenu.styled';
 
 export default function TabMenu({ tabHighlight, setTabHighlight }) {

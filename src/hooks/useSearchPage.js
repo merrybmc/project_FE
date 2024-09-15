@@ -44,7 +44,6 @@ export const useSearchMusical = (
   categoryCodes,
   shouldFetch,
   page,
-  itemsPerPage,
   startDate,
   endDate
 ) => {

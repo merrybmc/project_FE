@@ -1,7 +1,6 @@
 import * as S from './DetailProduct.styled';
-import { divMap } from './DetailLocation.styled';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 function DetailLocation({ adress, name, subName, la, lo }) {
   return (

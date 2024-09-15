@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { productDetailApi, productOpenApi } from '../Api';
+import { productOpenApi } from '../Api';
 import { XMLParser } from 'fast-xml-parser';
 
 const fetchLocate = async (id) => {
