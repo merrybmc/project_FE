@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import 'react-calendar/dist/Calendar.css';
-import Calendar from 'react-calendar';
 
 export const detailPage = styled.div`
   width: 1120px;

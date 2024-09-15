@@ -150,21 +150,6 @@ const SearchPage = () => {
     navigate(`/search?name=${key}`);
   };
 
-  const onSearch = () => {
-    if (!query.get('name').trim()) {
-      alert('검색어를 입력해 주세요.');
-      return; // 검색어가 없으면 함수를 종료
-    }
-    setSubmittedKey(query.get('name'));
-    setShouldFetch(true);
-    setPage(1); // 페이지 초기화
-    setKey('');
-  };
-
-  useEffect(() => {
-    onSearch();
-  }, [query]);
-
   const loadMore = () => {
     setPage((prevPage) => prevPage + 1); // 페이지 증가
   };
