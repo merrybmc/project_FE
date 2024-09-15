@@ -14,11 +14,11 @@ import {
   Spinerbox,
   FilterButton
 } from './SearchPage.styled';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SearchPage = () => {
   const [key, setKey] = useState('');
-  const [submittedKey, setSubmittedKey] = useState('');
+  const [submittedKey] = useState('');
   const [regionCodes, setRegionCodes] = useState([]);
   const [stateCodes, setStateCodes] = useState(['01', '02']);
   const [categoryCodes, setCategoryCodes] = useState([]);
@@ -31,7 +31,6 @@ const SearchPage = () => {
   const [sortOption, setSortOption] = useState('showAllMusicals'); // 정렬 옵션 추가
 
   const navigate = useNavigate();
-  const [query] = useSearchParams();
 
   const onNavigateDetailPage = (id) => {
     navigate(`/detail/${id}`);
